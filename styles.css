@@ -7,7 +7,9 @@
 
 .referencia {
     color: gold;
+    font-weight: bolder;
 }
+
             /* Primeira sessao */
 .primeiraPagina {
     width: 100%;
@@ -105,14 +107,43 @@
 
 .segundaPagina__texto2{
     padding: 7px;
-    font-size: 20px;
     color: whitesmoke;
     background-color: rgb(116, 70, 1, 0.7);
+    cursor: pointer;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+}
+
+.tooltip {
+    background-color: whitesmoke; /* Cor de fundo */
+    color: rgb(116, 70, 1); /* Cor do texto */
+    visibility: hidden; /* Inicialmente invisível */
+    width: 100%; /* Largura do tooltip */
+    height: 100%;
+    text-align: center; /* Centraliza o texto */
+    padding: 7px; /* Espaçamento interno */
+    position: absolute; /* Posiciona o tooltip em relação à div pai */
+    z-index: 1; /* Coloca o tooltip acima de outros elementos */
+    bottom: 0%; /* Coloca acima da div */
+    left: 0;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.9s; /* Animação de transição */
+}
+
+.segundaPagina__texto2:hover .tooltip {
+    visibility: visible; /* Torna visível ao passar o mouse */
+    opacity: 1; /* Torna opaco ao passar o mouse */
 }
 
 .segundaPagina__pergunta {
+    font-size: 25px;
     margin-top: 17px;
     text-align: center;
+}
+
+.tooltip .segundaPagina__pergunta {
+    margin-bottom: 12px;
 }
 
 .form {
