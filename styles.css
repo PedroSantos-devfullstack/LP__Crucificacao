@@ -5,9 +5,106 @@
     outline: none;
 }
 
+/* Efeito em palavtras de destaque */
 .referencia {
     color: gold;
     font-weight: bolder;
+}
+
+.referencia2 {
+    color: brown;
+    font-weight: bolder;
+}
+
+/* Menu da pagina */
+.header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 15%;
+    top: 10px;
+    right: 0;
+    gap: 20px;
+    font-size: 20px;
+    transition: 1s;
+    transform: translateX(0);
+    z-index: 1000;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.header:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.header ul {
+    list-style: none;
+    margin-right: -7px;
+}
+
+.header li {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, transparent 5%, rgb(202, 162, 88) 50%, transparent 100%);
+    padding: 7px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.header li:hover {
+    background: linear-gradient(90deg, wheat 5%, rgb(202, 162, 88) 50%, wheat 100%);
+    border: 0.5px solid rgba(0, 0, 0, 0.123);
+    border-bottom-left-radius: 50px;
+    padding: 12px;
+}
+
+.header a {
+    font-weight: bolder;
+    color: black;
+    font-style: none;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.player {
+    padding: 7px;
+    background: linear-gradient(90deg, transparent 5%, rgb(202, 162, 88) 50%, transparent 100%);
+    border-top-left-radius: 12px;
+}
+
+.player:hover {
+    background: linear-gradient(90deg, wheat 5%, rgb(202, 162, 88) 50%, wheat 100%);
+    border: 0.5px solid rgba(0, 0, 0, 0.123);
+}
+
+.header.hidden {
+    transform: translateY(-90%);
+    background-color: transparent;
+}
+
+#header__menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+    width: 60px;
+    padding: 7px;
+    border-radius: 12px;
+    border: none;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgb(202, 162, 88) 1%, wheat 100%);
+    gap: 5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.123);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#header__menuButton:hover {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, wheat 1%, rgb(202, 162, 88) 100%);
+    padding: 9px;
 }
 
 /* Primeira sessao */
@@ -53,6 +150,7 @@
 .versiculos__6, .versiculos__7, .versiculos__8, .versiculos__9, .versiculos__10 {
     color: wheat;
     background-color: rgba(0, 0, 0, 1);
+    border: 1px solid wheat;
     padding: 7px;
     font-size: 20px;
     position: absolute;
@@ -175,7 +273,11 @@
 .terceiraPagina__texto1:hover, .terceiraPagina__texto2:hover, .terceiraPagina__texto3:hover, .terceiraPagina__texto4:hover {
     color: rgb(116, 70, 1);
     background-color: wheat;
-    border-radius: 12px;
+    transition: 0.2s linear;
+}
+
+.terceiraPagina__texto1:hover .referencia, .terceiraPagina__texto2:hover .referencia, .terceiraPagina__texto3:hover .referencia, .terceiraPagina__texto4:hover .referencia {
+    color: brown;
 }
 
 /* Quarta sessao */
@@ -201,13 +303,43 @@
     color: darksalmon;
     background-color:  rgba(0, 0, 0, 0.6);
     border-radius: 7px;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 20px;
+    transition: 0.2s linear;
+}
+
+.quartaPagina__texto1:hover {
+    font-weight: bolder;
+    padding: 8px;
+    background-color: black;
+}
+
+/* Quinta Sessao - formulario */
+.quintaPagina {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: darksalmon;
+    background: radial-gradient(circle, rgb(22, 131, 182) 0%, rgb(19, 169, 214) 100%);
 }
 
 .form {
-    display: flex;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    
     gap: 20px;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.form__buttons {
+    display: flex;
+    flex-direction: column;
 }
 
 .form__quemSouEu, .form__comoMeEncontrar {

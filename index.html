@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
-
-    <!-- Media player da pagina -->
-    <section class="player">
-        <audio id="audio" src="musica1.mp3"></audio>
-        <div class="controls"></div>
+    <section class="header">
+        <!-- Media player da pagina -->
+        <section class="player">
+            <audio id="audio" src="musica1.mp3"></audio>
+            <div class="controls"></div>
             <button id="prev">⏮️</button>
             <button id="play">▶️</button>
             <button id="stop">⏹️</button>
             <button id="next">⏭️</button>
-        </div>
-        <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+            </div>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </section>
+        
+        <!-- Menu de navegacao -->
+        <nav>
+            <ul>
+                <li><a href="#primeiraPagina">Sacrifício de Cristo</a></li>
+                <li><a href="#segundaPagina">Fé</a></li>
+                <li><a href="#terceiraPagina">Conhecimento de Deus</a></li>
+                <li><a href="#quartaPagina">Apenas confie</a></li>
+            </ul>
+        </nav>
+        <button id="header__menuButton"><div><i class="fa-solid fa-bars"></i></div><p>Menu</p></button>
     </section>
 
     <!-- Primeira sessao -->
-    <section class="primeiraPagina">
+    <section class="primeiraPagina" id="primeiraPagina">
         <div class="primeiraPagina__texto">
             <div class="primeiraPagina__texto1">
                 <p>"Não há nenhuma morte que se possa comparar 
@@ -100,7 +113,7 @@
     </section>
 
     <!-- Segunda sessao -->
-    <section class="segundaPagina">
+    <section class="segundaPagina" id="segundaPagina">
         <div class="segundaPagina__texto">
             <div class="segundaPagina__texto1">
                 Se Jesus não tivesse descido para terrar para morrer por nós, nos reconciliando assim com Deus,
@@ -111,23 +124,23 @@
                 segundo a vontade de nosso Deus e Pai," -Gálatas 1:4
             </div>
             <div class="segundaPagina__texto2">
-                Então você deve estar se perguntando o por que dele ter dado sua vida, sendo ele santo e perfeito, por nós, falhos e pecadores?
+                Então você deve estar se perguntando o por que dele ter dado a vida, sendo ele santo e perfeito, por nós, falhos e pecadores?
                 a resposta está na sua palavra, no livro de João, capitulo 3 e verso 16 que diz: "Porque Deus amou o mundo de tal maneira que deu
                 o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna." <br>
                 Então, fica claro que Deus amou o mundo de forma incondicional, independente do seu passado, dos erros cometidos, sua altura,
                 cor, condição financeira. Sendo assim, o ato de Jesus na cruz do calvário é a representação do amor de Deus por nós, agora pois 
-                sendo nós, os que creêm nele nele, herdeiros de suas promessas.
+                sendo nós, os que creêm nele, herdeiros de suas promessas.
                 <span class="tooltip">
                     <div class="segundaPagina__pergunta">
-                        <p class="referencia">Mas o que é crer em Deus?</p>
+                        <p class="referencia2">Mas o que é crer em Deus?</p>
                     </div>
                     <p>
                     Simplesmente acreditar que Deus existe não é suficiente. Como Tiago 2:19 explica, os demônios também
                     acreditam na existência de Deus. O simples reconhecimento da existência de Deus não torna alguém piedoso.
                     Crer em Deus também deve envolver comprometimento e mudança de vida. Todos nós acreditamos em fatos sobre coisas que não
                     mudam a maneira como vivemos. Muitas pessoas que acreditam que Deus existe não fazem nada à luz desse conhecimento,
-                    então sua crença não é realmente melhor do que a dos demônios. A fé que não resulta em ações é uma fé morta
-                    <p class="referencia">(Tiago 1:26).</p>
+                    então sua crença não é realmente melhor do que a dos demônios. A fé que não resulta em ações é uma fé morta.
+                    <p class="referencia2">(Tiago 1:26)</p>
                     </p>
                 </span>
                 <div class="segundaPagina__pergunta">                   
@@ -138,19 +151,19 @@
     </section>
 
     <!-- Terceira sessao -->
-    <section class="terceiraPagina">
+    <section class="terceiraPagina" id="terceiraPagina">
         <div class="terceiraPagina__texto1">
             <p>
                 A Pessoa mais importante a conhecer é o nosso Criador. Na verdade, Jesus ensinou que a vida eterna não é apenas um período
                 de tempo; é um relacionamento: “E a vida eterna é esta: que te conheçam a ti, o único Deus verdadeiro, e a Jesus Cristo, a 
-                quem enviaste” <div class="referencia">(João 17:3).</div>
+                quem enviaste” <div class="referencia">(João 17:3)</div>
             </p>
         </div>
         <div class="terceiraPagina__texto2">
             <p>
                 Uma das formas de conhecê-lo se dá a entender o que Deus revelou sobre Si mesmo na Bíblia. O problema é a nossa pecaminosidade, 
-                pois o pecado nos afasta e nos faz inimigos de Deus, sendo ele santo não tendo parte com o pecado.  
-                <div class="referencia">(Tiago 4:4).</div>
+                pois o pecado nos afasta e nos constitue inimigos de Deus, sendo ele santo não tendo parte com o pecado.  
+                <div class="referencia">(Tiago 4:4)</div>
             </p>
         </div>
         <div class="terceiraPagina__texto3">
@@ -158,7 +171,7 @@
             nosso propósito, e também abrirá nosso olhos espirituais fechados pelo pecado. 
             "Mas, se o nosso evangelho ainda está encoberto, é para os que se perdem que está encoberto,
             nos quais o deus deste século cegou o entendimento dos incrédulos, para que lhes não resplandeça a luz do evangelho da glória de 
-            Cristo, o qual é a imagem de Deus." <div class="referencia">-2 Coríntios 4:3, 4.</div>
+            Cristo, o qual é a imagem de Deus." <div class="referencia">(2 Coríntios 4:3, 4)</div>
         </div>
         <div class="terceiraPagina__texto4">
             <p>
@@ -170,7 +183,7 @@
     </section>
 
     <!-- Quarta sessao -->
-    <section class="quartaPagina">
+    <section class="quartaPagina" id="quartaPagina">
         <div class="quartaPagina__texto1">
             <p>
                 "16 Peço que, da riqueza de sua glória, ele os fortaleça com poder interior por meio de seu Espírito.
@@ -182,29 +195,37 @@
             </p>
         </div>
     </section>
-    <form class="form">
-        <div class="form__quemSouEu">
-            Quem sou eu?
-            <input type="text" placeholder="Nome">
-            <input type="text" placeholder="Idade">
-            <label for="sexo">Gênero:</label>          
-            <select id="sexo">
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-                <option value="outro">Outro</option>
-            </select>
-        </div>
-        <div class="form__comoMeEncontrar">
-            Como me encontar?
-            <input type="tel" placeholder="Telefone/WhatsAPP">
-            <input type="email" placeholder="E-mail">
-            <input type="text" placeholder="Estado">
-            <input type="text" placeholder="Cidade">
-            <input type="text" placeholder="Bairro">
-            <input type="text" placeholder="Rua">
-            <input type="text" placeholder="Nº">
-        </div>        
-    </form>
+
+    <!-- Quinta sessao -->
+    <section class="quintaPagina">
+        <form class="form">
+            <div class="form__quemSouEu">
+                <h1>Quem sou eu?</h1>
+                <input type="text" placeholder="Nome">
+                <input type="text" placeholder="Idade">
+                <label for="sexo">Gênero:</label>          
+                <select id="sexo">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div class="form__comoMeEncontrar">
+                <h1>Como me encontar?</h1>
+                <input type="tel" placeholder="Telefone/WhatsAPP">
+                <input type="email" placeholder="E-mail">
+                <input type="text" placeholder="Estado">
+                <input type="text" placeholder="Cidade">
+                <input type="text" placeholder="Bairro">
+                <input type="text" placeholder="Rua">
+                <input type="text" placeholder="Nº">
+            </div>
+            <div class="form__buttons">
+                <input type="button" value="Enviar">
+                <input type="button" value="Limpar">
+            </div>
+        </form>
+    </section>
     <script src="./script.js"></script>
 </body>
 </html>

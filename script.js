@@ -53,5 +53,12 @@ volumeControl.addEventListener('input', () => {
     audio.volume = volumeControl.value;
 });
 
-// Carrega a primeira faixa ao iniciar
+            // Carrega a primeira faixa ao iniciar
 loadTrack(currentTrack);
+
+// Botao do menu do header
+
+document.getElementById('header__menuButton').addEventListener('click', function() {
+    const header = document.querySelector('.header');
+    header.classList.toggle('hidden');
+});
