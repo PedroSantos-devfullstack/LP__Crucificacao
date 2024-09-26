@@ -198,13 +198,13 @@
 
     <!-- Quinta sessao -->
     <section class="quintaPagina">
-        <form class="form">
+        <form class="quintaPagina__form">
             <div class="form__quemSouEu">
                 <h1>Quem sou eu?</h1>
-                <input type="text" placeholder="Nome">
-                <input type="text" placeholder="Idade">
+                <input type="text" name="name" placeholder="Nome">
+                <input type="text" name="idade" placeholder="Idade">
                 <label for="sexo">Gênero:</label>          
-                <select id="sexo">
+                <select id="sexo" name="sexo">
                     <option value="masculino">Masculino</option>
                     <option value="feminino">Feminino</option>
                     <option value="outro">Outro</option>
@@ -212,17 +212,18 @@
             </div>
             <div class="form__comoMeEncontrar">
                 <h1>Como me encontar?</h1>
-                <input type="tel" placeholder="Telefone/WhatsAPP">
-                <input type="email" placeholder="E-mail">
-                <input type="text" placeholder="Estado">
-                <input type="text" placeholder="Cidade">
-                <input type="text" placeholder="Bairro">
-                <input type="text" placeholder="Rua">
-                <input type="text" placeholder="Nº">
+                <input type="tel" name="tel" placeholder="Telefone/WhatsAPP">
+                <input type="email" name="email" placeholder="E-mail">
+                <input type="text" name="estado" placeholder="Estado">
+                <input type="text" name="cidade" placeholder="Cidade">
+                <input type="text" name="bairro" placeholder="Bairro">
+                <input type="text" name="rua" placeholder="Rua">
+                <input type="text" name="n" placeholder="Nº">
             </div>
             <div class="form__buttons">
-                <input type="button" value="Enviar">
-                <input type="button" value="Limpar">
+                <button type="submit" class="enviarButton">
+                    Enviar 
+                </button>
             </div>
         </form>
     </section>

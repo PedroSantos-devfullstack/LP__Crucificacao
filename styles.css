@@ -36,7 +36,7 @@
 }
 
 .header:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .header ul {
@@ -47,10 +47,11 @@
 .header li {
     background: rgb(255,255,255);
     background: linear-gradient(90deg, transparent 5%, rgb(202, 162, 88) 50%, transparent 100%);
-    padding: 7px;
+    padding: 3px;
     border-bottom-left-radius: 20px;
     text-align: center;
     transition: 0.3s;
+    
 }
 
 .header li:hover {
@@ -69,14 +70,18 @@
 }
 
 .player {
-    padding: 7px;
+    padding: 3px;
     background: linear-gradient(90deg, transparent 5%, rgb(202, 162, 88) 50%, transparent 100%);
+    transition: 0.3s;
     border-top-left-radius: 12px;
+    border-bottom-left-radius: 1px;
 }
 
 .player:hover {
     background: linear-gradient(90deg, wheat 5%, rgb(202, 162, 88) 50%, wheat 100%);
     border: 0.5px solid rgba(0, 0, 0, 0.123);
+    border-bottom-left-radius: 100px;
+    padding: 12px;
 }
 
 .header.hidden {
@@ -326,23 +331,67 @@
     background: radial-gradient(circle, rgb(22, 131, 182) 0%, rgb(19, 169, 214) 100%);
 }
 
-.form {
+.quintaPagina__form {
     background-color: rgba(255, 255, 255, 0.9);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr; /* Define duas colunas iguais */
+    gap: 16px; /* Espaçamento entre os elementos do grid */
     
     gap: 20px;
     padding: 7px;
     border-radius: 7px;
 }
 
+.quintaPagina__form {
+    width: 40%;
+}
+
+.quintaPagina__form input {
+    height: 30px;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+}
+
 .form__buttons {
-    display: flex;
-    flex-direction: column;
+    grid-column: span 2; /* A div dos botões ocupa as duas colunas */
+    display: flex; /* Para alinhar os botões em linha */
+    justify-content: space-between; /* Espaça os botões igualmente */
+}
+
+.form__buttons button{
+    font-weight: bolder;
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    background: radial-gradient(circle, rgb(202, 162, 88) 1%, wheat 100%);
+    position: relative;
+}
+
+.form__buttons button:hover {
+    background: radial-gradient(circle, wheat 1%, rgb(202, 162, 88) 100%);
+}
+
+.form__buttons .loading {
+    width: 200px;
+    top: -250px;
+    left: 200px;
+    position: absolute;
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .form__quemSouEu, .form__comoMeEncontrar {
+    grid-column: span 1; /* As duas primeiras divs ocupam 1 coluna cada */
     display: flex;
     flex-direction: column;
     gap: 7px;
