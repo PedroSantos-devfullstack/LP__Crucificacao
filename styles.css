@@ -119,7 +119,7 @@
     background-color: aliceblue;
     border-radius: 50%;
     position: absolute;
-    left: 0px;
+    left: -1px;
 
     height: 22px;
     width: 26px;
@@ -170,12 +170,19 @@
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
 }
 
 .primeiraPagina__texto {
     width: 45%;
-    margin: 17% 0 0 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .primeiraPagina__texto1 {
@@ -195,9 +202,8 @@
 .primeiraPagina__versiculos {
     display: flex;
     justify-content: center;
-    
-    margin: 17% 0 0 300px;
     position: relative;
+    height: auto;
 }
 
 .versiculos__1, .versiculos__2, .versiculos__3, .versiculos__4, .versiculos__5, 
@@ -207,27 +213,20 @@
     border: 1px solid wheat;
     padding: 7px;
     font-size: 20px;
-    position: absolute;
     width: 400px;
+    position: absolute;
     border-radius: 12px;
-    /* animacao */
+    
+    display: none; /* Esconde todas as divs inicialmente */
     opacity: 0;
-    animation: animacao__versiculos 10.5s;
+    transform: translateY(20px); /* Efeito de deslizamento */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Suaviza a transição */
 }
 
-@keyframes animacao__versiculos {
-    0% {
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+.active {
+    display: block; /* Mostra a div ativa */
+    opacity: 1; /* Opacidade total */
+    transform: translateY(0); /* Retorna à posição original */
 }
 
 /* Segunda Sessao */
@@ -355,7 +354,7 @@
     text-align: center;
 
     color: darksalmon;
-    background-color:  rgba(0, 0, 0, 0.6);
+    background-color:  rgba(0, 0, 0, 0.5);
     border-radius: 7px;
     font-weight: bold;
     font-size: 20px;
@@ -364,8 +363,8 @@
 
 .quartaPagina__texto1:hover {
     font-weight: bolder;
-    padding: 8px;
-    background-color: black;
+    scale: calc(1.1);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* Quinta Sessao - formulario */
@@ -388,10 +387,12 @@
     gap: 20px;
     padding: 7px;
     border-radius: 7px;
+    transition: 1s;
 }
 
 .quintaPagina__form {
     width: 40%;
+
 }
 
 .quintaPagina__form input {
@@ -452,7 +453,7 @@
 }
 
 .header.light {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .header.light:hover {
@@ -460,7 +461,7 @@
 }
 
 .header.dark {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .header.dark:hover  {
@@ -481,7 +482,49 @@ nav.dark a {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
+.quintaPagina__form.light:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
 .quintaPagina__form.dark {
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.quintaPagina__form.dark:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width:1280px) {
+    /* header */
+.header {
+    width: 50%;
+}
+    /* primeiraSessao */
+.primeiraPagina__texto {
+    width: 95%;
+}
+    /* segundaSessao */
+.segundaPagina__texto {
+    width: 100%;
+}
+.segundaPagina__texto1, .segundaPagina__texto2 {
+    font-size: 17px;
+}
+    /* terceiraSessao */
+    .terceiraPagina__texto1, .terceiraPagina__texto2, .terceiraPagina__texto3, .terceiraPagina__texto4 {
+    width: 100%;
+    font-size: 17px;
+}
+
+    /* quintaSessao */
+.quintaPagina__form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+
 }

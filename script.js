@@ -85,6 +85,27 @@ document.getElementById('header__menuButton').addEventListener('click', function
     header.classList.toggle('hidden');
 });
 
+// Animacao dos versiculos da primeira pagina
+const versiculos = document.querySelectorAll('[class^="versiculos__"]');
+let currentIndex = 0;
+
+function showNextVersiculo() {
+    // Oculta a div ativa atual
+    versiculos[currentIndex].classList.remove('active');
+    
+    // Incrementa o índice e faz o loop
+    currentIndex = (currentIndex + 1) % versiculos.length;
+
+    // Exibe a próxima div
+    versiculos[currentIndex].classList.add('active');
+}
+
+// Inicia o ciclo
+setInterval(showNextVersiculo, 10000); // Muda a cada 10 segundos
+showNextVersiculo(); // Para mostrar o primeiro imediatamente
+
+
+
 // EndPoint do Formulario quintaPagina
 const handleSubmit = (event) => {
     event.preventDefault();
