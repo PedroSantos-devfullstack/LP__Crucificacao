@@ -29,14 +29,12 @@
     transition: 1s;
     transform: translateX(0);
     z-index: 1000;
-
-    background-color: rgba(255, 255, 255, 0.7);
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
 
 .header:hover {
-    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgb(202, 162, 88);
 }
 
 .header ul {
@@ -63,7 +61,7 @@
 
 .header a {
     font-weight: bolder;
-    color: black;
+
     font-style: none;
     text-decoration: none;
     white-space: nowrap;
@@ -74,19 +72,70 @@
     background: linear-gradient(90deg, transparent 5%, rgb(202, 162, 88) 50%, transparent 100%);
     transition: 0.3s;
     border-top-left-radius: 12px;
-    border-bottom-left-radius: 1px;
+    
 }
 
 .player:hover {
     background: linear-gradient(90deg, wheat 5%, rgb(202, 162, 88) 50%, wheat 100%);
     border: 0.5px solid rgba(0, 0, 0, 0.123);
-    border-bottom-left-radius: 100px;
-    padding: 12px;
+    padding: 7px;
 }
 
 .header.hidden {
     transform: translateY(-90%);
-    background-color: transparent;
+}
+
+.header__temeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temeButton__checkbox {
+    opacity: 0;
+}
+
+.temeButton__checkbox:checked + .temeButton__label .temeButton__ball {
+    transform: translateX(24px);
+}
+
+.temeButton__label {
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    padding: 7px;
+    position: relative;
+    height: 20px;
+    width: 50px;
+
+    transform: scale(1.5);
+}
+
+.temeButton__ball {
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+
+    height: 22px;
+    width: 26px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.fa-moon {
+    color: gold;
+    font-size: 20px;
+}
+
+.fa-sun {
+    color: goldenrod;
+    font-size: 18px;
 }
 
 #header__menuButton {
@@ -138,7 +187,7 @@
 .primeiraPagina__texto2 {
     font-size: 20px;
     color: wheat;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     padding: 7px;
 }
 
@@ -332,7 +381,6 @@
 }
 
 .quintaPagina__form {
-    background-color: rgba(255, 255, 255, 0.9);
     display: grid;
     grid-template-columns: 1fr 1fr; /* Define duas colunas iguais */
     gap: 16px; /* Espaçamento entre os elementos do grid */
@@ -364,6 +412,7 @@
     cursor: pointer;
     width: 100%;
     height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
     background: radial-gradient(circle, rgb(202, 162, 88) 1%, wheat 100%);
     position: relative;
 }
@@ -395,4 +444,44 @@
     display: flex;
     flex-direction: column;
     gap: 7px;
+}
+
+/* MUDANCA DE TEMA DO HEADER */
+.header.hidden.light, .header.hidden.dark {
+    background-color: transparent;
+}
+
+.header.light {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header.light:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.header.dark {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header.dark:hover  {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+nav.light a{
+    color: black;
+}
+
+nav.dark a {
+    color: #fff;
+}
+
+/* MUDANCA DE TEMA DA QUINTA SESSAO FORM */
+.quintaPagina__form.light {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.quintaPagina__form.dark {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
 }

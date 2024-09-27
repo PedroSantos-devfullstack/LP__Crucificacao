@@ -56,6 +56,28 @@ volumeControl.addEventListener('input', () => {
             // Carrega a primeira faixa ao iniciar
 loadTrack(currentTrack);
 
+// Butao de mudanca do tema dark/clear
+const chk = document.getElementById('chk');
+const header = document.querySelector('.header');
+const nav = document.querySelector('nav');
+const quintaPagina__form = document.querySelector('.quintaPagina__form');
+
+
+chk.addEventListener('change', () => {
+    header.classList.toggle('dark');
+    header.classList.toggle('light');
+
+    nav.classList.toggle('dark');
+    nav.classList.toggle('light');
+
+    quintaPagina__form.classList.toggle('dark');
+    quintaPagina__form.classList.toggle('light');
+});
+
+header.classList.add('light');
+nav.classList.add('light');
+quintaPagina__form.classList.add('light'); 
+
 // Botao do menu do header
 
 document.getElementById('header__menuButton').addEventListener('click', function() {
